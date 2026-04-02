@@ -16,10 +16,7 @@ export default function Header() {
               <path d="M6 9l6 13 6-13H6z" fill="#fff"/>
             </svg>
           </div>
-          <div className="leading-snug">
-            <div className="text-sm font-bold text-[var(--color-gold)]">アレキサンドライト買取センター</div>
-            <div className="text-[10px] text-white/50">アレキサンドライト買取専門</div>
-          </div>
+          <div className="text-sm font-bold text-[var(--color-gold)]">アレキサンドライト買取センター</div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 text-sm">

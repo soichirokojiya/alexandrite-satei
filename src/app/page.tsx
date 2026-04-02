@@ -20,8 +20,8 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-gold)]/20 to-transparent" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 md:py-32 text-center">
-          <p className="text-[var(--color-gold)] text-sm tracking-[0.3em] uppercase mb-8 font-medium">
-            世界三大希少石 — 専門査定
+          <p className="text-[var(--color-gold)] text-sm tracking-[0.2em] mb-8 font-medium">
+            アレキサンドライト買取専門 — 世界三大希少石
           </p>
           <h1 className="font-luxury text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8">
             Alexandrite

@@ -14,7 +14,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alexandrite-satei.vercel.app"),
+  metadataBase: new URL("https://alexandrite.love"),
   title: {
     default: "アレキサンドライト買取センター｜アレキサンドライト買取専門の無料査定",
     template: "%s｜アレキサンドライト買取センター",
@@ -62,7 +62,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "アレキサンドライト買取センター",
               description: "アレキサンドライト専門の買取査定サービス",
-              url: "https://alexandrite-satei.vercel.app",
+              url: "https://alexandrite.love",
             }),
           }}
         />
