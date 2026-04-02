@@ -5,23 +5,23 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #1e2030;
-  --foreground: #f0ede6;
-  --card: #262840;
-  --card-foreground: #f0ede6;
+  --background: #faf9f7;
+  --foreground: #1a1a2e;
+  --card: #ffffff;
+  --card-foreground: #1a1a2e;
   --popover: #111118;
   --popover-foreground: #f5f5f0;
   --primary: #c8a45e;
   --primary-foreground: #0a0a0f;
-  --secondary: #272940;
-  --secondary-foreground: #f0ede6;
-  --muted: #272940;
-  --muted-foreground: #b0b0c0;
-  --accent: #272940;
-  --accent-foreground: #f0ede6;
+  --secondary: #f3f2ef;
+  --secondary-foreground: #1a1a2e;
+  --muted: #f3f2ef;
+  --muted-foreground: #6b6b80;
+  --accent: #f3f2ef;
+  --accent-foreground: #1a1a2e;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #353550;
-  --input: #353550;
+  --border: #e5e3de;
+  --input: #e5e3de;
   --ring: #c8a45e;
   --radius: 0.5rem;
 
@@ -82,7 +82,12 @@ html {
 .gold-line {
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
-  opacity: 0.3;
+  opacity: 0.25;
+}
+
+/* Dark hero section on light background */
+.hero-dark {
+  background: linear-gradient(160deg, #1a1a2e 0%, #2a2a40 50%, #1a1a2e 100%);
 }
 
 /* Serif headings */
