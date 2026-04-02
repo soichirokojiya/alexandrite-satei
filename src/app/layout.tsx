@@ -35,12 +35,15 @@ export const metadata: Metadata = {
     siteName: "アレキサンドライト査定.com",
     title: "アレキサンドライト査定.com｜アレキサンドライト買取専門の無料査定",
     description: "アレキサンドライト専門の買取査定。世界三大希少石を専門鑑定士が適正価格で査定。全国対応・送料無料。",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "アレキサンドライト査定.com",
     description: "アレキサンドライト専門の買取査定。世界三大希少石を適正価格で。全国対応・送料無料。",
+    images: ["/og.png"],
   },
+  icons: { icon: "/favicon.png", apple: "/apple-touch-icon.png" },
   robots: { index: true, follow: true },
 };
 

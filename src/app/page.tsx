@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,32 +13,51 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-80 h-80 bg-[var(--color-emerald)]/20 rounded-full blur-[100px]" />
         <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-80 h-80 bg-[var(--color-ruby)]/15 rounded-full blur-[100px]" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32">
-          <Badge className="mb-6 bg-[var(--color-gold)]/15 text-[var(--color-gold)] border-[var(--color-gold)]/30 text-sm px-4 py-1.5">
-            世界三大希少石 専門査定
-          </Badge>
-          <h1 className="text-3xl md:text-[48px] font-extrabold leading-[1.2] tracking-tight mb-6">
-            アレキサンドライトの<br />
-            価値、正しく<br />
-            <span className="text-[var(--color-gold)]">査定いたします。</span>
-          </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-lg">
-            「昼のエメラルド、夜のルビー」——<br />
-            その美しいカラーチェンジの価値を、<br />
-            専門の提携鑑定士が適正に評価します。
-          </p>
-          <Link
-            href="#contact"
-            className="inline-block bg-[var(--color-gold)] text-[var(--color-navy)] font-bold text-lg px-10 py-4 rounded-xl hover:bg-[var(--color-gold-light)] transition-colors duration-200 cursor-pointer shadow-lg"
-          >
-            無料査定を申し込む
-          </Link>
-          <div className="flex flex-wrap gap-6 mt-10 text-sm text-white/70">
-            {["鑑別書なしOK", "全国対応", "送料無料", "秘密厳守"].map((t) => (
-              <span key={t} className="flex items-center gap-1.5">
-                <svg className="w-4 h-4 text-[var(--color-gold)]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                {t}
-              </span>
-            ))}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <Badge className="mb-6 bg-[var(--color-gold)]/15 text-[var(--color-gold)] border-[var(--color-gold)]/30 text-sm px-4 py-1.5">
+                世界三大希少石 専門査定
+              </Badge>
+              <h1 className="text-3xl md:text-[44px] font-extrabold leading-[1.2] tracking-tight mb-6">
+                アレキサンドライトの<br />
+                価値、正しく<br />
+                <span className="text-[var(--color-gold)]">査定いたします。</span>
+              </h1>
+              <p className="text-lg text-white/80 mb-10 leading-relaxed">
+                「昼のエメラルド、夜のルビー」——<br />
+                その美しいカラーチェンジの価値を、<br />
+                専門の提携鑑定士が適正に評価します。
+              </p>
+              <Link
+                href="#contact"
+                className="inline-block bg-[var(--color-gold)] text-[var(--color-navy)] font-bold text-lg px-10 py-4 rounded-xl hover:bg-[var(--color-gold-light)] transition-colors duration-200 cursor-pointer shadow-lg"
+              >
+                無料査定を申し込む
+              </Link>
+              <div className="flex flex-wrap gap-5 mt-10 text-sm text-white/70">
+                {["鑑別書なしOK", "全国対応", "送料無料", "秘密厳守"].map((t) => (
+                  <span key={t} className="flex items-center gap-1.5">
+                    <svg className="w-4 h-4 text-[var(--color-gold)]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+            {/* カラーチェンジを表現：緑と赤の宝石を並べる */}
+            <div className="hidden md:grid grid-cols-2 gap-4">
+              <div className="relative h-64 rounded-xl overflow-hidden border border-white/10">
+                <Image src="https://images.unsplash.com/photo-1603561117745-b1fc134ed79d?w=500&q=80" alt="エメラルドグリーンの宝石 - 昼光下のアレキサンドライト" fill className="object-cover" priority />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                  <p className="text-xs text-white/80 font-medium">昼光下 — 深い緑色</p>
+                </div>
+              </div>
+              <div className="relative h-64 rounded-xl overflow-hidden border border-white/10">
+                <Image src="https://images.unsplash.com/photo-1667013829296-ce44608fe210?w=500&q=80" alt="ルビーレッドの宝石 - 白熱灯下のアレキサンドライト" fill className="object-cover" priority />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                  <p className="text-xs text-white/80 font-medium">白熱灯下 — 赤紫色</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -63,7 +83,19 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">アレキサンドライトとは</h2>
-          <p className="text-center text-muted-foreground mb-14">ダイヤモンドより希少とされる、神秘の宝石</p>
+          <p className="text-center text-muted-foreground mb-10">ダイヤモンドより希少とされる、神秘の宝石</p>
+          {/* 宝石イメージ写真 */}
+          <div className="grid grid-cols-3 gap-3 mb-14 max-w-2xl mx-auto">
+            <div className="relative h-32 md:h-44 rounded-xl overflow-hidden">
+              <Image src="https://images.unsplash.com/photo-1608613517869-07b097abbcf3?w=400&q=80" alt="グリーンの宝石リング" fill className="object-cover" />
+            </div>
+            <div className="relative h-32 md:h-44 rounded-xl overflow-hidden">
+              <Image src="https://images.unsplash.com/photo-1551947391-249dcb8ed976?w=400&q=80" alt="宝石のルース" fill className="object-cover" />
+            </div>
+            <div className="relative h-32 md:h-44 rounded-xl overflow-hidden">
+              <Image src="https://images.unsplash.com/photo-1589674574101-bb9ebf36ffc5?w=400&q=80" alt="レッドの宝石リング" fill className="object-cover" />
+            </div>
+          </div>
           <div className="grid md:grid-cols-3 gap-5">
             <Card>
               <CardContent className="p-7 text-center">
@@ -162,7 +194,12 @@ export default function Home() {
       <section id="about" className="py-20 bg-secondary/50">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">選ばれる理由</h2>
-          <p className="text-center text-muted-foreground mb-14">アレキサンドライトの価値を正しく評価するために</p>
+          <p className="text-center text-muted-foreground mb-10">アレキサンドライトの価値を正しく評価するために</p>
+          <div className="relative h-48 md:h-60 rounded-2xl overflow-hidden mb-10">
+            <Image src="https://images.unsplash.com/photo-1600119612651-0db31b3a7baa?w=1200&q=80" alt="カラーストーンの宝石" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            <p className="absolute bottom-5 left-6 text-white font-bold text-lg">厳選された提携鑑定士が、一石一石丁寧に査定</p>
+          </div>
           <div className="grid md:grid-cols-2 gap-5">
             {[
               { num: "01", title: "アレキサンドライト専門", desc: "カラーストーンの中でも特に査定が難しいアレキサンドライトに特化。変色効果の品質を正確に評価できる専門の提携鑑定士が対応します。" },
@@ -275,9 +312,9 @@ export default function Home() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section id="contact" className="py-20 hero-bg text-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-96 h-96 bg-[var(--color-emerald)]/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 right-1/3 -translate-y-1/2 w-96 h-96 bg-[var(--color-ruby)]/8 rounded-full blur-[120px]" />
+      <section id="contact" className="py-20 relative text-white overflow-hidden">
+        <Image src="https://images.unsplash.com/photo-1583937443351-f2f669fbe2cf?w=1600&q=80" alt="" fill className="object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[var(--color-navy)]/90" />
         <div className="relative z-10 max-w-3xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">まずは<span className="text-[var(--color-gold)]">無料査定</span>からお気軽にどうぞ</h2>
