@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
   try {
     await resend.emails.send({
-      from: "アレキサンドライト査定 <onboarding@resend.dev>",
+      from: "アレキサンドライト買取センター <info@alexandrite.love>",
       to: ["koujiy@souichirou.org", "mokeygod@gmail.com"],
       subject: `【アレキ査定】${escapeHtml(n)}様からのお問い合わせ`,
       html: `
