@@ -14,7 +14,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <div className="font-bold text-sm text-[var(--color-gold)]">アレキサンドライト査定.com</div>
+                <div className="font-bold text-sm text-[var(--color-gold)]">アレキサンドライト買取センター</div>
                 <div className="text-[10px] text-white/50">アレキサンドライト買取専門</div>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function Footer() {
           <p>
             運営：<a href="https://cfac.co.jp" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/60 transition-colors duration-200">Common Future & Company株式会社</a>
           </p>
-          <p>&copy; {new Date().getFullYear()} アレキサンドライト査定.com All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} アレキサンドライト買取センター All rights reserved.</p>
         </div>
       </div>
     </footer>

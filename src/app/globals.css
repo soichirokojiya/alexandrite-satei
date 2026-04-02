@@ -85,6 +85,27 @@ html {
   background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
 }
 
+/* Luxury gem glow */
+.gem-glow {
+  position: relative;
+}
+.gem-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, #059669, #c8a45e, #dc2626, #059669);
+  opacity: 0.4;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+/* Serif headings for luxury feel */
+.font-luxury {
+  font-family: var(--font-heading), serif;
+  letter-spacing: 0.02em;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

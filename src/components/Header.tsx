@@ -17,7 +17,7 @@ export default function Header() {
             </svg>
           </div>
           <div className="leading-snug">
-            <div className="text-sm font-bold text-[var(--color-gold)]">アレキサンドライト査定.com</div>
+            <div className="text-sm font-bold text-[var(--color-gold)]">アレキサンドライト買取センター</div>
             <div className="text-[10px] text-white/50">アレキサンドライト買取専門</div>
           </div>
         </Link>

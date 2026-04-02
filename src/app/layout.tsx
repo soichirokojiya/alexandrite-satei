@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Geist } from "next/font/google";
+import { Noto_Sans_JP, Geist, Cormorant } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+const cormorant = Cormorant({ subsets: ["latin"], variable: "--font-heading", weight: ["400", "500", "600", "700"] });
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
@@ -15,11 +16,11 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   metadataBase: new URL("https://alexandrite-satei.vercel.app"),
   title: {
-    default: "アレキサンドライト査定.com｜アレキサンドライト買取専門の無料査定",
-    template: "%s｜アレキサンドライト査定.com",
+    default: "アレキサンドライト買取センター｜アレキサンドライト買取専門の無料査定",
+    template: "%s｜アレキサンドライト買取センター",
   },
   description:
-    "アレキサンドライトの買取・査定なら専門サイト「アレキサンドライト査定.com」。世界三大希少石のひとつ、アレキサンドライトを専門鑑定士が適正価格で査定。カラーチェンジの美しさ・産地・カラットに応じた高額査定。鑑別書なしでもOK。全国対応・送料無料の宅配査定。",
+    "アレキサンドライトの買取・査定なら専門サイト「アレキサンドライト買取センター」。世界三大希少石のひとつ、アレキサンドライトを専門鑑定士が適正価格で査定。カラーチェンジの美しさ・産地・カラットに応じた高額査定。鑑別書なしでもOK。全国対応・送料無料の宅配査定。",
   keywords: [
     "アレキサンドライト 買取",
     "アレキサンドライト 査定",
@@ -32,14 +33,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    siteName: "アレキサンドライト査定.com",
-    title: "アレキサンドライト査定.com｜アレキサンドライト買取専門の無料査定",
+    siteName: "アレキサンドライト買取センター",
+    title: "アレキサンドライト買取センター｜アレキサンドライト買取専門の無料査定",
     description: "アレキサンドライト専門の買取査定。世界三大希少石を専門鑑定士が適正価格で査定。全国対応・送料無料。",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "アレキサンドライト査定.com",
+    title: "アレキサンドライト買取センター",
     description: "アレキサンドライト専門の買取査定。世界三大希少石を適正価格で。全国対応・送料無料。",
     images: ["/og.png"],
   },
@@ -51,7 +52,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ja" className={cn("h-full antialiased", notoSansJP.variable, geist.variable, "font-sans")}>
+    <html lang="ja" className={cn("h-full antialiased", notoSansJP.variable, geist.variable, cormorant.variable, "font-sans")}>
       <head>
         <script
           type="application/ld+json"
@@ -59,7 +60,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "アレキサンドライト査定.com",
+              name: "アレキサンドライト買取センター",
               description: "アレキサンドライト専門の買取査定サービス",
               url: "https://alexandrite-satei.vercel.app",
             }),
