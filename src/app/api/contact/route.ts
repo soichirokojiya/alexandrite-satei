@@ -13,7 +13,7 @@ export async function POST(request: Request) {
 
   if (typeof body !== "object" || body === null) return Response.json({ error: "不正なリクエストです" }, { status: 400 });
 
-  const { name, phone, email, item_type, message } = body as Record<string, unknown>;
+  const { name, phone, email, item_type, message, imageUrls } = body as Record<string, unknown>;
 
   if (typeof name !== "string" || typeof phone !== "string" || typeof email !== "string" || typeof item_type !== "string" || typeof message !== "string") {
     return Response.json({ error: "必須項目を入力してください" }, { status: 400 });
@@ -36,7 +36,8 @@ export async function POST(request: Request) {
             <tr style="border-bottom:1px solid #eee;"><td style="padding:12px;font-weight:bold;color:#0f172a;">電話番号</td><td style="padding:12px;">${escapeHtml(p)}</td></tr>
             <tr style="border-bottom:1px solid #eee;"><td style="padding:12px;font-weight:bold;color:#0f172a;">メールアドレス</td><td style="padding:12px;">${escapeHtml(e)}</td></tr>
             <tr style="border-bottom:1px solid #eee;"><td style="padding:12px;font-weight:bold;color:#0f172a;">アイテム種類</td><td style="padding:12px;">${escapeHtml(it)}</td></tr>
-            <tr><td style="padding:12px;font-weight:bold;color:#0f172a;vertical-align:top;">ご相談内容</td><td style="padding:12px;white-space:pre-wrap;">${escapeHtml(m)}</td></tr>
+            <tr style="border-bottom:1px solid #eee;"><td style="padding:12px;font-weight:bold;color:#0f172a;vertical-align:top;">ご相談内容</td><td style="padding:12px;white-space:pre-wrap;">${escapeHtml(m)}</td></tr>
+            ${Array.isArray(imageUrls) && imageUrls.length > 0 ? `<tr><td style="padding:12px;font-weight:bold;color:#0f172a;vertical-align:top;">添付画像</td><td style="padding:12px;">${imageUrls.map((url: unknown) => typeof url === "string" ? `<a href="${escapeHtml(url)}" style="color:#c8a45e;">${escapeHtml(url)}</a><br/><img src="${escapeHtml(url)}" style="max-width:300px;margin-top:8px;border-radius:8px;" />` : "").join("<br/><br/>")}</td></tr>` : ""}
           </table>
         </div>`,
       replyTo: e,
