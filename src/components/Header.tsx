@@ -7,7 +7,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#0a0a0f]/95 backdrop-blur-md text-white sticky top-0 z-50 border-b border-[var(--color-gold)]/10">
+    <header className="bg-[#141420]/95 backdrop-blur-md text-white sticky top-0 z-50 border-b border-[var(--color-gold)]/10">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-luxury text-lg tracking-wide text-[var(--color-gold)] cursor-pointer">
           アレキサンドライト買取センター
@@ -39,7 +39,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="md:hidden bg-[#0a0a0f] px-6 pb-6 space-y-1 border-t border-[var(--color-gold)]/10">
+        <nav className="md:hidden bg-[#141420] px-6 pb-6 space-y-1 border-t border-[var(--color-gold)]/10">
           {[
             { href: "/#price", label: "買取相場" },
             { href: "/#about", label: "選ばれる理由" },

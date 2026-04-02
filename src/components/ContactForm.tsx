@@ -43,7 +43,7 @@ export default function ContactForm() {
           <svg className="w-6 h-6 text-[var(--color-gold)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
         </div>
         <h3 className="text-xl font-luxury mb-3">送信完了しました</h3>
-        <p className="text-white/50">専門鑑定士より1営業日以内にご連絡いたします。</p>
+        <p className="text-white/60">専門鑑定士より1営業日以内にご連絡いたします。</p>
         <button onClick={() => setStatus("idle")} className="mt-6 text-[var(--color-gold)] text-sm underline underline-offset-4 cursor-pointer">別のお問い合わせ</button>
       </div>
     );
@@ -53,20 +53,20 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="border border-white/10 rounded-2xl p-8 md:p-10 space-y-6 backdrop-blur-sm bg-white/[0.02]">
       <div className="grid md:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="c-name" className="block text-[13px] text-white/50 tracking-wider uppercase mb-2">お名前 <span className="text-[var(--color-gold)]">*</span></label>
+          <label htmlFor="c-name" className="block text-[13px] text-white/60 tracking-wider uppercase mb-2">お名前 <span className="text-[var(--color-gold)]">*</span></label>
           <input id="c-name" type="text" name="name" required value={formData.name} onChange={handleChange} placeholder="山田 太郎" className={inputClass} />
         </div>
         <div>
-          <label htmlFor="c-phone" className="block text-[13px] text-white/50 tracking-wider uppercase mb-2">電話番号 <span className="text-[var(--color-gold)]">*</span></label>
+          <label htmlFor="c-phone" className="block text-[13px] text-white/60 tracking-wider uppercase mb-2">電話番号 <span className="text-[var(--color-gold)]">*</span></label>
           <input id="c-phone" type="tel" name="phone" required value={formData.phone} onChange={handleChange} placeholder="090-1234-5678" className={inputClass} />
         </div>
       </div>
       <div>
-        <label htmlFor="c-email" className="block text-[13px] text-white/50 tracking-wider uppercase mb-2">メールアドレス <span className="text-[var(--color-gold)]">*</span></label>
+        <label htmlFor="c-email" className="block text-[13px] text-white/60 tracking-wider uppercase mb-2">メールアドレス <span className="text-[var(--color-gold)]">*</span></label>
         <input id="c-email" type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="example@email.com" className={inputClass} />
       </div>
       <div>
-        <label htmlFor="c-item" className="block text-[13px] text-white/50 tracking-wider uppercase mb-2">アイテムの種類 <span className="text-[var(--color-gold)]">*</span></label>
+        <label htmlFor="c-item" className="block text-[13px] text-white/60 tracking-wider uppercase mb-2">アイテムの種類 <span className="text-[var(--color-gold)]">*</span></label>
         <select id="c-item" name="item_type" required value={formData.item_type} onChange={handleChange} className={inputClass}>
           <option value="">選択してください</option>
           <option value="リング（指輪）">リング（指輪）</option>
@@ -78,14 +78,14 @@ export default function ContactForm() {
         </select>
       </div>
       <div>
-        <label htmlFor="c-msg" className="block text-[13px] text-white/50 tracking-wider uppercase mb-2">ご相談内容 <span className="text-[var(--color-gold)]">*</span></label>
+        <label htmlFor="c-msg" className="block text-[13px] text-white/60 tracking-wider uppercase mb-2">ご相談内容 <span className="text-[var(--color-gold)]">*</span></label>
         <textarea id="c-msg" name="message" rows={4} required value={formData.message} onChange={handleChange} placeholder="カラット数、産地、鑑別書の有無など" className={`${inputClass} resize-none`} />
       </div>
       {status === "error" && <div role="alert" className="text-red-400 text-sm p-3 border border-red-400/20 rounded-lg">{errorMessage}</div>}
       <button type="submit" disabled={status === "sending"} className="w-full bg-[var(--color-gold)] text-black py-4 rounded-full font-bold text-[15px] tracking-wider hover:bg-[var(--color-gold-light)] transition-all duration-300 disabled:opacity-50 cursor-pointer">
         {status === "sending" ? "送信中..." : "無料査定を申し込む"}
       </button>
-      <p className="text-[12px] text-center text-white/30">しつこい営業は一切いたしません。秘密厳守。</p>
+      <p className="text-[12px] text-center text-white/50">しつこい営業は一切いたしません。秘密厳守。</p>
     </form>
   );
 }

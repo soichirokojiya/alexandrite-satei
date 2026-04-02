@@ -26,7 +26,7 @@ export default function Home() {
           <p className="text-xl md:text-2xl font-light mb-4 text-white/80">
             その美しさの価値を、正しく。
           </p>
-          <p className="text-white/40 text-[15px] mb-14 max-w-md mx-auto leading-relaxed">
+          <p className="text-white/60 text-[15px] mb-14 max-w-md mx-auto leading-relaxed">
             世界三大希少石のひとつ、アレキサンドライト。<br />
             専門の提携鑑定士が、適正な価値を査定いたします。
           </p>
@@ -36,7 +36,7 @@ export default function Home() {
           >
             無料査定を申し込む
           </Link>
-          <div className="flex justify-center gap-10 mt-16 text-[12px] text-white/30 tracking-wider">
+          <div className="flex justify-center gap-10 mt-16 text-[12px] text-white/60 tracking-wider">
             {["鑑別書なしOK", "全国対応", "送料無料", "秘密厳守"].map((t) => (
               <span key={t}>{t}</span>
             ))}
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-[var(--color-gold)] text-[12px] tracking-[0.3em] uppercase mb-6">Color Change</p>
           <h2 className="font-luxury text-3xl md:text-4xl mb-4">昼のエメラルド、夜のルビー</h2>
-          <p className="text-white/40 text-[15px] mb-14 max-w-lg mx-auto">
+          <p className="text-white/60 text-[15px] mb-14 max-w-lg mx-auto">
             太陽光では深い緑色、白熱灯の下では赤紫色に。<br />
             ひとつの石が見せる二つの顔——それがアレキサンドライトです。
           </p>
@@ -63,7 +63,7 @@ export default function Home() {
               className="w-full h-auto"
             />
           </div>
-          <p className="text-white/25 text-[12px] mt-4 tracking-wider">同一の石 — 光源の違いによるカラーチェンジ</p>
+          <p className="text-white/40 text-[12px] mt-4 tracking-wider">同一の石 — 光源の違いによるカラーチェンジ</p>
         </div>
       </section>
 
@@ -79,7 +79,7 @@ export default function Home() {
             ].map((item) => (
               <div key={item.sub} className="bg-background p-8 text-center">
                 <p className="text-2xl md:text-3xl font-luxury text-[var(--color-gold)]">{item.value}</p>
-                <p className="text-[11px] text-white/30 tracking-wider mt-2 uppercase">{item.sub}</p>
+                <p className="text-[11px] text-white/60 tracking-wider mt-2 uppercase">{item.sub}</p>
               </div>
             ))}
           </div>
@@ -93,7 +93,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <p className="text-[var(--color-gold)] text-[12px] tracking-[0.3em] uppercase mb-6">Price Range</p>
             <h2 className="font-luxury text-3xl md:text-4xl mb-4">買取相場の目安</h2>
-            <p className="text-white/40 text-[15px]">品質とカラット数で大きく変わります</p>
+            <p className="text-white/60 text-[15px]">品質とカラット数で大きく変わります</p>
           </div>
 
           {/* カット石写真 */}
@@ -109,8 +109,8 @@ export default function Home() {
                 <tr className="border-b border-[var(--color-gold)]/20">
                   <th className="text-left py-4 px-5 text-[var(--color-gold)] font-normal text-[12px] tracking-widest uppercase">カラット</th>
                   <th className="text-right py-4 px-5 text-[var(--color-gold)] font-normal text-[12px] tracking-widest uppercase">Sランク</th>
-                  <th className="text-right py-4 px-5 text-white/40 font-normal text-[12px] tracking-widest uppercase">Aランク</th>
-                  <th className="text-right py-4 px-5 text-white/40 font-normal text-[12px] tracking-widest uppercase">Bランク</th>
+                  <th className="text-right py-4 px-5 text-white/60 font-normal text-[12px] tracking-widest uppercase">Aランク</th>
+                  <th className="text-right py-4 px-5 text-white/60 font-normal text-[12px] tracking-widest uppercase">Bランク</th>
                 </tr>
               </thead>
               <tbody>
@@ -123,8 +123,8 @@ export default function Home() {
                   <tr key={row.ct} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
                     <td className="py-4 px-5 font-medium">{row.ct}</td>
                     <td className="py-4 px-5 text-right text-[var(--color-gold)] font-medium">{row.s}</td>
-                    <td className="py-4 px-5 text-right text-white/50">{row.a}</td>
-                    <td className="py-4 px-5 text-right text-white/50">{row.b}</td>
+                    <td className="py-4 px-5 text-right text-white/60">{row.a}</td>
+                    <td className="py-4 px-5 text-right text-white/60">{row.b}</td>
                   </tr>
                 ))}
               </tbody>
@@ -178,7 +178,7 @@ export default function Home() {
                 <span className="text-[var(--color-gold)]/50 font-luxury text-3xl leading-none w-12 flex-shrink-0">{item.num}</span>
                 <div>
                   <h3 className="font-medium text-lg mb-1">{item.title}</h3>
-                  <p className="text-white/40 text-[15px] leading-relaxed">{item.desc}</p>
+                  <p className="text-white/60 text-[15px] leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -209,7 +209,7 @@ export default function Home() {
                     <h3 className="font-medium">{item.title}</h3>
                     <span className="text-[10px] text-[var(--color-gold)]/60 border border-[var(--color-gold)]/20 px-2 py-0.5 rounded-full">{item.tag}</span>
                   </div>
-                  <p className="text-white/40 text-[14px]">{item.desc}</p>
+                  <p className="text-white/60 text-[14px]">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -234,7 +234,7 @@ export default function Home() {
               <div key={item.num} className="bg-background p-8 text-center">
                 <span className="text-[var(--color-gold)] font-luxury text-3xl">{item.num}</span>
                 <h3 className="font-medium mt-4 mb-2">{item.title}</h3>
-                <p className="text-white/40 text-[13px] whitespace-pre-line">{item.desc}</p>
+                <p className="text-white/60 text-[13px] whitespace-pre-line">{item.desc}</p>
                 <p className="text-[var(--color-gold)]/50 text-[11px] mt-3 tracking-wider">{item.time}</p>
               </div>
             ))}
@@ -262,7 +262,7 @@ export default function Home() {
                 <AccordionTrigger className="text-left text-[15px] py-5 cursor-pointer hover:no-underline text-white/80 hover:text-white transition-colors duration-300">
                   {item.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-white/40 text-[14px] leading-relaxed pb-5">
+                <AccordionContent className="text-white/60 text-[14px] leading-relaxed pb-5">
                   {item.a}
                 </AccordionContent>
               </AccordionItem>
@@ -289,7 +289,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <p className="text-[var(--color-gold)] text-[12px] tracking-[0.3em] uppercase mb-6">Contact</p>
             <h2 className="font-luxury text-3xl md:text-4xl mb-4">無料査定のお申し込み</h2>
-            <p className="text-white/40 text-[15px]">アレキサンドライトのことなら何でもご相談ください。</p>
+            <p className="text-white/60 text-[15px]">アレキサンドライトのことなら何でもご相談ください。</p>
           </div>
           <ContactForm />
         </div>
