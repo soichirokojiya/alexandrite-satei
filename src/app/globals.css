@@ -5,33 +5,30 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Luxury navy + gold for jewelry */
-  --background: oklch(0.98 0.003 260);
-  --foreground: oklch(0.15 0.02 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 260);
-  --primary: oklch(0.25 0.06 260);
-  --primary-foreground: oklch(0.98 0.01 80);
-  --secondary: oklch(0.96 0.01 260);
-  --secondary-foreground: oklch(0.25 0.04 260);
-  --muted: oklch(0.96 0.008 260);
-  --muted-foreground: oklch(0.5 0.02 260);
-  --accent: oklch(0.72 0.12 80);
-  --accent-foreground: oklch(0.2 0.04 260);
+  --background: #0a0a0f;
+  --foreground: #f5f5f0;
+  --card: #111118;
+  --card-foreground: #f5f5f0;
+  --popover: #111118;
+  --popover-foreground: #f5f5f0;
+  --primary: #c8a45e;
+  --primary-foreground: #0a0a0f;
+  --secondary: #1a1a24;
+  --secondary-foreground: #f5f5f0;
+  --muted: #1a1a24;
+  --muted-foreground: #8a8a9a;
+  --accent: #1a1a24;
+  --accent-foreground: #f5f5f0;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.008 260);
-  --input: oklch(0.92 0.008 260);
-  --ring: oklch(0.72 0.12 80);
-  --radius: 0.625rem;
+  --border: #222230;
+  --input: #222230;
+  --ring: #c8a45e;
+  --radius: 0.5rem;
 
-  --color-navy: #0f172a;
-  --color-navy-light: #1e293b;
-  --color-gold: #c8a45e;
-  --color-gold-light: #ddc07a;
-  --color-emerald: #059669;
-  --color-ruby: #dc2626;
+  --gold: #c8a45e;
+  --gold-light: #ddc07a;
+  --emerald: #34d399;
+  --ruby: #f87171;
 }
 
 @theme inline {
@@ -53,14 +50,12 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-navy: var(--color-navy);
-  --color-navy-light: var(--color-navy-light);
-  --color-gold: var(--color-gold);
-  --color-gold-light: var(--color-gold-light);
-  --color-emerald: var(--color-emerald);
-  --color-ruby: var(--color-ruby);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-emerald: var(--emerald);
+  --color-ruby: var(--ruby);
   --font-sans: var(--font-sans);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-heading);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -70,7 +65,8 @@
 
 body {
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -79,41 +75,24 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .animate-pulse { animation: none; }
 }
 
-.hero-bg {
-  background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+/* Gold divider */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+  opacity: 0.3;
 }
 
-/* Luxury gem glow */
-.gem-glow {
-  position: relative;
-}
-.gem-glow::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: conic-gradient(from 0deg, #059669, #c8a45e, #dc2626, #059669);
-  opacity: 0.4;
-  filter: blur(20px);
-  z-index: -1;
-}
-
-/* Serif headings for luxury feel */
+/* Serif headings */
 .font-luxury {
-  font-family: var(--font-heading), serif;
-  letter-spacing: 0.02em;
+  font-family: var(--font-heading), 'Georgia', serif;
+  font-weight: 500;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
-  }
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+  html { @apply font-sans; }
 }
