@@ -7,13 +7,26 @@ export default function Home() {
   return (
     <>
       {/* ===== Hero（ダーク）===== */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden hero-dark text-white">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden hero-dark text-white">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px]">
           <div className="absolute inset-0 bg-[var(--color-emerald)]/10 rounded-full blur-[150px] animate-pulse" style={{ animationDuration: '6s' }} />
           <div className="absolute inset-16 bg-[var(--color-ruby)]/8 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '8s', animationDelay: '3s' }} />
         </div>
         <div className="absolute top-0 left-0 w-full h-px gold-line" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center py-28">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-12 items-center">
+          {/* 右側: ヒーロー写真 */}
+          <div className="hidden md:block order-2">
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                <Image src="/34230289_m.jpg" alt="アレキサンドライトの鑑定" width={600} height={750} className="w-full h-auto" priority />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-28 h-28 rounded-xl overflow-hidden border-2 border-[var(--color-gold)]/30 shadow-xl">
+                <Image src="/26735582_m.jpg" alt="赤い宝石" width={200} height={200} className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+          {/* 左側: テキスト */}
+          <div className="order-1 text-center md:text-left">
           <p className="text-[var(--color-gold)] text-[12px] tracking-[0.4em] uppercase mb-10">アレキサンドライト買取専門</p>
           <h1 className="font-luxury text-5xl md:text-7xl leading-[1.05] mb-6 tracking-tight">Alexandrite</h1>
           <div className="gold-line max-w-[80px] mx-auto mb-8" />
@@ -27,8 +40,9 @@ export default function Home() {
           <Link href="#contact" className="inline-block bg-[var(--color-gold)] text-black font-bold px-12 py-4 rounded-full text-[15px] tracking-wider hover:bg-[var(--color-gold-light)] transition-all duration-300 cursor-pointer shadow-lg shadow-[var(--color-gold)]/15">
             無料査定を申し込む
           </Link>
-          <div className="flex justify-center gap-8 mt-14 text-[12px] text-white/40 tracking-wider">
+          <div className="flex flex-wrap justify-center md:justify-start gap-6 mt-14 text-[12px] text-white/40 tracking-wider">
             {["鑑別書なしOK", "全国対応", "送料無料", "秘密厳守"].map((t) => (<span key={t}>{t}</span>))}
+          </div>
           </div>
         </div>
       </section>
@@ -83,10 +97,21 @@ export default function Home() {
           <p className="text-muted-foreground text-[15px] mb-12 max-w-lg mx-auto">
             光源によって緑から赤へ色が変わる——この神秘的なカラーチェンジが最大の魅力です。
           </p>
-          <div className="max-w-2xl mx-auto rounded-xl overflow-hidden border border-border shadow-sm">
-            <Image src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Alexandrite.jpg" alt="アレキサンドライトのカラーチェンジ" width={800} height={400} className="w-full h-auto" />
+          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image src="/3547162_m.jpg" alt="アレキサンドライト リング — 昼光下（緑色）" width={600} height={400} className="w-full h-auto" />
+              <div className="bg-card p-3 text-center">
+                <p className="text-muted-foreground text-[13px]">昼光下 — <span className="text-[var(--color-emerald)] font-medium">緑色</span></p>
+              </div>
+            </div>
+            <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image src="/3547163_m.jpg" alt="アレキサンドライト リング — 白熱灯下（赤紫色）" width={600} height={400} className="w-full h-auto" />
+              <div className="bg-card p-3 text-center">
+                <p className="text-muted-foreground text-[13px]">白熱灯下 — <span className="text-[var(--color-ruby)] font-medium">赤紫色</span></p>
+              </div>
+            </div>
           </div>
-          <p className="text-muted-foreground text-[12px] mt-4 tracking-wider">同一の石 — 光源の違いによるカラーチェンジ</p>
+          <p className="text-muted-foreground text-[12px] mt-6 tracking-wider text-center">同じリングが光源によってこれほど色が変わります</p>
         </div>
       </section>
 
@@ -94,7 +119,12 @@ export default function Home() {
       <section className="py-24 bg-secondary/50">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-[var(--color-gold)] text-[12px] tracking-[0.3em] uppercase mb-6 text-center">Cases</p>
-          <h2 className="font-luxury text-3xl md:text-4xl text-center mb-14">買取事例</h2>
+          <h2 className="font-luxury text-3xl md:text-4xl text-center mb-6">買取事例</h2>
+          <div className="max-w-xs mx-auto mb-12">
+            <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image src="/23059129_m.jpg" alt="アレキサンドライト ジュエリー" width={400} height={300} className="w-full h-auto" />
+            </div>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { item: "アレキサンドライト リング", detail: "0.8ct / ブラジル産 / Pt900", price: "38万円", note: "鑑別書あり。カラーチェンジが鮮明で高評価。" },
@@ -164,10 +194,11 @@ export default function Home() {
           <p className="text-[var(--color-gold)] text-[12px] tracking-[0.3em] uppercase mb-6 text-center">Price Range</p>
           <h2 className="font-luxury text-3xl md:text-4xl text-center mb-4">買取相場の目安</h2>
           <p className="text-center text-muted-foreground text-[15px] mb-12">品質とカラット数で大きく変わります</p>
-          <div className="max-w-[160px] mx-auto mb-10">
-            <div className="rounded-lg overflow-hidden border border-border shadow-sm">
-              <Image src="https://upload.wikimedia.org/wikipedia/commons/0/01/Alexandrite_26.75cts.jpg" alt="26.75ctアレキサンドライト" width={300} height={225} className="w-full h-auto" />
+          <div className="max-w-sm mx-auto mb-10">
+            <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image src="/3829992_m.jpg" alt="アレキサンドライトのルース各種" width={600} height={400} className="w-full h-auto" />
             </div>
+            <p className="text-muted-foreground text-[12px] mt-3 text-center">品質・サイズによって価格は大きく異なります</p>
           </div>
           <div className="overflow-x-auto bg-card border border-border rounded-xl shadow-sm">
             <table className="w-full text-[14px]">
