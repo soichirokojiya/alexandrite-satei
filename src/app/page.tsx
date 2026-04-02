@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -76,7 +77,23 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">アレキサンドライトとは</h2>
-          <p className="text-center text-muted-foreground mb-14">ダイヤモンドより希少とされる、神秘の宝石</p>
+          <p className="text-center text-muted-foreground mb-10">ダイヤモンドより希少とされる、神秘の宝石</p>
+
+          {/* カラーチェンジ実物写真 */}
+          <div className="max-w-2xl mx-auto mb-14">
+            <div className="relative rounded-2xl overflow-hidden border border-border shadow-lg">
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Alexandrite.jpg"
+                alt="アレキサンドライトのカラーチェンジ — 昼光下（緑）と白熱灯下（赤）の比較"
+                width={800}
+                height={400}
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-center text-muted-foreground text-sm mt-3">
+              同じ石が光源で色が変わる — 昼光下では緑色、白熱灯下では赤紫色に
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-5">
             <Card>
               <CardContent className="p-7 text-center">
@@ -113,7 +130,19 @@ export default function Home() {
       <section id="price" className="py-20 bg-[var(--color-navy)] text-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">買取相場の目安</h2>
-          <p className="text-center text-white/60 mb-14">品質とカラット数で大きく変わります</p>
+          <p className="text-center text-white/60 mb-10">品質とカラット数で大きく変わります</p>
+          <div className="max-w-xs mx-auto mb-12">
+            <div className="relative rounded-xl overflow-hidden border border-white/10 gem-glow">
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/0/01/Alexandrite_26.75cts.jpg"
+                alt="26.75カラットのアレキサンドライト カット石"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-center text-white/40 text-xs mt-3">26.75ct アレキサンドライト</p>
+          </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
