@@ -225,7 +225,7 @@ export default function Home() {
       {/* ===== コラム ===== */}
       <section className="py-24 bg-background">
         <div className="max-w-3xl mx-auto px-6">
-          <p className="text-[var(--color-gold)] text-[12px] tracking-[0.3em] uppercase mb-6 text-center">Column</p>
+          <p id="column" className="text-[var(--color-gold)] text-[12px] tracking-[0.3em] uppercase mb-6 text-center scroll-mt-24">Column</p>
           <h2 className="font-luxury text-3xl md:text-4xl text-center mb-14">お役立ちコラム</h2>
           <div className="space-y-3">
             {[

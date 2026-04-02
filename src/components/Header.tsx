@@ -19,6 +19,7 @@ export default function Header() {
             { href: "/#about", label: "選ばれる理由" },
             { href: "/#flow", label: "買取の流れ" },
             { href: "/#faq", label: "FAQ" },
+            { href: "/#column", label: "コラム" },
           ].map((item) => (
             <Link key={item.href} href={item.href} className="hover:text-foreground transition-colors duration-200 cursor-pointer">
               {item.label}
@@ -45,6 +46,7 @@ export default function Header() {
             { href: "/#about", label: "選ばれる理由" },
             { href: "/#flow", label: "買取の流れ" },
             { href: "/#faq", label: "FAQ" },
+            { href: "/#column", label: "コラム" },
           ].map((item) => (
             <Link key={item.href} href={item.href} className="block py-3 text-muted-foreground border-b border-border cursor-pointer" onClick={() => setMenuOpen(false)}>
               {item.label}
