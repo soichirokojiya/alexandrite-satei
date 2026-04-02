@@ -43,20 +43,23 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            {/* カラーチェンジを表現：緑と赤の宝石を並べる */}
-            <div className="hidden md:grid grid-cols-2 gap-4">
-              <div className="relative h-64 rounded-xl overflow-hidden border border-white/10">
-                <Image src="https://images.unsplash.com/photo-1603561117745-b1fc134ed79d?w=500&q=80" alt="エメラルドグリーンの宝石 - 昼光下のアレキサンドライト" fill className="object-cover" priority />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
-                  <p className="text-xs text-white/80 font-medium">昼光下 — 深い緑色</p>
-                </div>
+            {/* 宝石ビジュアル - デザイン性重視 */}
+            <div className="hidden md:block relative">
+              {/* メイン写真 */}
+              <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10">
+                <Image src="https://images.unsplash.com/photo-1603561117745-b1fc134ed79d?w=600&q=80" alt="宝石" fill className="object-cover" priority sizes="50vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy)]/40 via-transparent to-transparent" />
               </div>
-              <div className="relative h-64 rounded-xl overflow-hidden border border-white/10">
-                <Image src="https://images.unsplash.com/photo-1667013829296-ce44608fe210?w=500&q=80" alt="ルビーレッドの宝石 - 白熱灯下のアレキサンドライト" fill className="object-cover" priority />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
-                  <p className="text-xs text-white/80 font-medium">白熱灯下 — 赤紫色</p>
-                </div>
+              {/* フローティング小写真 */}
+              <div className="absolute -bottom-6 -left-6 w-36 h-36 rounded-xl overflow-hidden shadow-xl border-4 border-[var(--color-navy)]">
+                <Image src="https://images.unsplash.com/photo-1667013829296-ce44608fe210?w=300&q=80" alt="赤い宝石" fill className="object-cover" sizes="150px" />
               </div>
+              <div className="absolute -top-4 -right-4 w-28 h-28 rounded-xl overflow-hidden shadow-xl border-4 border-[var(--color-navy)]">
+                <Image src="https://images.unsplash.com/photo-1551947391-249dcb8ed976?w=300&q=80" alt="ダイヤモンド" fill className="object-cover" sizes="120px" />
+              </div>
+              {/* ゴールドのアクセントライン */}
+              <div className="absolute top-1/2 -left-10 w-20 h-px bg-gradient-to-r from-transparent to-[var(--color-gold)]/50" />
+              <div className="absolute top-1/3 -right-10 w-20 h-px bg-gradient-to-l from-transparent to-[var(--color-gold)]/50" />
             </div>
           </div>
         </div>
@@ -195,10 +198,8 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">選ばれる理由</h2>
           <p className="text-center text-muted-foreground mb-10">アレキサンドライトの価値を正しく評価するために</p>
-          <div className="relative h-48 md:h-60 rounded-2xl overflow-hidden mb-10">
+          <div className="relative h-48 md:h-56 rounded-2xl overflow-hidden mb-10">
             <Image src="https://images.unsplash.com/photo-1600119612651-0db31b3a7baa?w=1200&q=80" alt="カラーストーンの宝石" fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            <p className="absolute bottom-5 left-6 text-white font-bold text-lg">厳選された提携鑑定士が、一石一石丁寧に査定</p>
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             {[
